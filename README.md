@@ -86,6 +86,7 @@ __Networking__
 - [(Video) 열혈 select() 설명](https://youtu.be/e8w3Hx68OQE?si=gaeM0J5wZOYQg480)
 - [socket protocol 설정](https://m.blog.naver.com/pjok1122/221238467407)
 - [socket non-blocking 설정](https://velog.io/@jyongk/TCP-Socket-Blocking-Non-Blocking)
+- [block, non-block 그리고 sync, async](https://hamait.tistory.com/930)
 
 __HTTP__
 - [HTTP 구조](https://velog.io/@teddybearjung/HTTP-%EA%B5%AC%EC%A1%B0-%EB%B0%8F-%ED%95%B5%EC%8B%AC-%EC%9A%94%EC%86%8C)
