@@ -1,28 +1,28 @@
-# webserv
+# Webserv
 
 42 seoul 3인 팀 프로젝트, C++로 자체 웹 서버를 제작합니다. HTTP 서버를 실행하고, 요청을 처리하고, 구성 파일을 구문 분석할 수 있는 프로그램입니다.
 
-Team : [Feedbaek](https://github.com/Feedbaek) / [OverRaddit](https://github.com/OverRaddit) / [Rob-Yoo](https://github.com/Rob-Yoo)
+팀원 : [Feedbaek](https://github.com/Feedbaek) / [OverRaddit](https://github.com/OverRaddit) / [Rob-Yoo](https://github.com/Rob-Yoo)
 
 ## About
 이 프로젝트는 42 seoul 핵심 교육 과정의 일부 입니다. 이 프로젝트의 목표는 C++98을 사용하여 기본적인 HTTP 웹 서버를 처음부터 구축하는 것입니다. 이 웹 서버는 HTTP GET, POST, PUT, DELETE 요청을 처리할 수 있으며, 지정된 루트 디렉토리에서 정적 파일을 제공하거나 CGI를 사용하여 동적 콘텐츠를 제공할 수 있습니다. 또한 select()의 도움을 받아 여러 클라이언트 연결을 동시에 처리할 수 있습니다.
 
 프로젝트의 자세한 내용은 root 경로에 webserv_en.subject.pdf 파일을 참고하세요.
 
-# Parts of a webserv
+# Parts of a Webserv
 
-기본적인 HTTP 웹 서버로서 클라이언트의 HTTP 요청을 수신 및 처리하기 위해 여러 구성 요소로 구성됩니다. 아래는 우리 webserv의 주요 부분입니다.
+기본적인 HTTP 웹 서버로서 클라이언트의 HTTP 요청을 수신 및 처리하기 위해 여러 구성 요소로 구성됩니다. 아래는 우리 Webserv의 주요 부분입니다.
 
 ## Server Core
 TCP 연결을 처리하고 들어오는 요청을 수신하고 응답을 다시 보내는 등의 작업을 수행하는 웹 서버의 네트워킹 부분입니다. 소켓 생성 및 관리, 입력 및 출력 스트림 처리, 서버와 클라이언트 간의 데이터 흐름 관리와 같은 웹 서버의 낮은 수준 네트워킹 작업을 담당합니다.
 
 ### I/O Multiplexing
-webserv 프로젝트의 핵심인 I/O Multiplexing을 여기에 설명하기엔 너무 양이 많기 때문에, 이미 [잘 정리된 글](https://blog.naver.com/n_cloudplatform/222189669084)을 참고하시면 좋을 것 같습니다.
+Webserv 프로젝트의 핵심인 I/O Multiplexing을 여기에 설명하기엔 너무 양이 많기 때문에, 이미 [잘 정리된 글](https://blog.naver.com/n_cloudplatform/222189669084)을 참고하시면 좋을 것 같습니다.
 
 
 ## Request Parsing
 
-webserv의 Parsing 부분은 HTTP Request에서 정보를 해석하고 추출하는 프로세스를 나타냅니다. webserv에서 Request Parsing은 Request 클래스에 의해 수행됩니다. 들어오는 요청을 받아 구문 분석하고 메서드, 경로, 헤더 및 메시지 본문(있는 경우)과 같은 관련 정보를 추출합니다.
+Webserv의 Parsing 부분은 HTTP Request에서 정보를 해석하고 추출하는 프로세스를 나타냅니다. Webserv에서 Request Parsing은 Request 클래스에 의해 수행됩니다. 들어오는 요청을 받아 구문 분석하고 메서드, 경로, 헤더 및 메시지 본문(있는 경우)과 같은 관련 정보를 추출합니다.
 
 ## Response Building
 
@@ -30,7 +30,7 @@ Response 클래스는 Request 대한 응답으로 클라이언트에 다시 전�
 
 ## Configuration File
 
-config 파일은 webserv 작동 방식을 지정하는 다양한 설정과 지시문이 포함된 텍스트 파일입니다. 이러한 설정에는 웹 서버가 수신해야 하는 포트 번호, 웹 서버의 루트 디렉터리 위치 및 기타 여러 설정이 포함될 수 있습니다.
+config 파일은 Webserv 작동 방식을 지정하는 다양한 설정과 지시문이 포함된 텍스트 파일입니다. 이러한 설정에는 웹 서버가 수신해야 하는 포트 번호, 웹 서버의 루트 디렉터리 위치 및 기타 여러 설정이 포함될 수 있습니다.
 
 다음은 config 파일 형식을 보여주는 예제 파일입니다.
 <br>
