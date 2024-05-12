@@ -1,11 +1,11 @@
 # Webserv
 
-42 seoul 3인 팀 프로젝트, C++로 자체 웹 서버를 제작합니다. HTTP 서버를 실행하고, 요청을 처리하고, 구성 파일을 구문 분석할 수 있는 프로그램입니다.
+42 seoul 3인 팀 프로젝트, C++을 사용한 자체 웹 서버를 제작합니다. socket을 사용해서 HTTP 서버를 실행하고, 요청을 처리하고, 설정 파일을 parsing 할 수 있는 프로그램입니다.
 
 팀원 : [Feedbaek](https://github.com/Feedbaek) / [OverRaddit](https://github.com/OverRaddit) / [Rob-Yoo](https://github.com/Rob-Yoo)
 
 ## About
-이 프로젝트는 42 seoul 핵심 교육 과정의 일부 입니다. 이 프로젝트의 목표는 C++98을 사용하여 기본적인 HTTP 웹 서버를 처음부터 구축하는 것입니다. 이 웹 서버는 HTTP GET, POST, PUT, DELETE 요청을 처리할 수 있으며, 지정된 루트 디렉토리에서 정적 파일을 제공하거나 CGI를 사용하여 동적 콘텐츠를 제공할 수 있습니다. 또한 select()의 도움을 받아 여러 클라이언트 연결을 동시에 처리할 수 있습니다.
+이 프로젝트는 42 seoul 핵심 교육 과정의 일부 입니다. 이 프로젝트의 목표는 C++98을 사용하여 기본적인 HTTP 웹 서버를 처음부터 구축하는 것입니다. 이 웹 서버는 socket을 사용해서 HTTP GET, POST, PUT, DELETE 요청을 처리할 수 있으며, 지정된 루트 디렉토리에서 정적 파일을 제공하거나 CGI를 사용하여 동적 콘텐츠를 제공할 수 있습니다. 또한 kqueue()(select 함수 계열)를 사용해서 여러 클라이언트 연결을 동시에 처리할 수 있습니다.
 
 프로젝트의 자세한 내용은 root 경로에 webserv_en.subject.pdf 파일을 참고하세요.
 
